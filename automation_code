@@ -1,0 +1,9 @@
+function sendConfirmationEmail(e) {
+  var name = e.namedValues["Name"][0];
+  var email = e.namedValues["Email Address"][0];
+
+  var subject = "🎉 GDSC Everyday AI - Registration Confirmed!";
+  var message = "Hi " + name + ",\n\nThanks for registering! We look forward to seeing you at the event.\n\n - GDSC Team";
+
+  MailApp.sendEmail(email, subject, message);
+}
